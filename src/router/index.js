@@ -12,6 +12,9 @@ export default new Router({
     },{
     	path:'/login',
     	component:resolve => require(['../components/pages/login/login.vue'], resolve)
+    },{
+    	path:'/index',
+    	component:resolve => require(['../components/pages/index/index.vue'],resolve)
     }
   ]
 })
