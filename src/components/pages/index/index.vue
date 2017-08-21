@@ -1,14 +1,17 @@
 <template>
 	<div class="index">
 		<vm-head></vm-head>
+		<vm-nav></vm-nav>
 	</div>
 </template>
 
 <script type="text/javascript">
 	import vmHead from '../../commons/Head.vue'
+	import vmNav from '../../commons/SlideNav.vue'
 	export default{
 		components:{
-			vmHead
+			vmHead,
+			vmNav
 		}
 	}
 </script>
