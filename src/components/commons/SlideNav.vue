@@ -22,14 +22,17 @@ import axios from 'axios'
 			return {
 				data:[],
 				defaultProps:{
-					label:'label',
-					children:'children'
+					label:'',
+					children:''
 				}
 			}
 		},
 		beforeMount(){
 			axios.get('../../../static/data/slideNav.json').then(response =>{
 				this.data=response.data.data;
+				let value=Object.values(response.data.defaultProps);
+				this.defaultProps.label=value[0];
+				this.defaultProps.children=value[1];
 			})
 		}
 	}

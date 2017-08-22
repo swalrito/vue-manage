@@ -1745,5 +1745,9 @@
 
 			}]
 		}]
-	}]
+	}],
+	"defaultProps":{
+		"label":"label",
+		"children":"children"
+				}
 }
