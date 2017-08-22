@@ -1,12 +1,17 @@
 <template>
 	<div class="slideNav">
-		<el-tree 
-		:data="data"
-		:props="defaultProps"
-		accordion
-		class='nav-tree'
-		>
-		</el-tree>
+	<el-menu theme="dark">
+		<el-submenu index='1'>
+			<template slot='title'>公路项目</template>
+			<el-tree :props='defaultProps' :data='data' class='vm_tree'>
+			</el-tree>
+		</el-submenu>
+		<el-submenu index='2'>
+			<template slot='title'>铁路项目</template>
+			<el-tree :props='defaultProps' :data='data' class='vm_tree'>
+			</el-tree>
+		</el-submenu>
+	</el-menu>
 	</div>
 </template>
 
@@ -15,77 +20,700 @@
 		data:function(){
 			return{
 				data:[{
-					label:'一级 1-1',
+					label:'贵州省',
 					children:[{
-						label:'二级 1-2',
+					label:'A公司',
+					children:[{
+						label:'地点A',
 						children:[{
-							label:'三级 1-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
 				},{
-					label:'一级 1-2',
+					label:'B公司',
 					children:[{
-						label:'二级 2-2',
+						label:'地点A',
 						children:[{
-							label:'三级 2-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
 				},{
-					label:'一级 3-1',
+					label:'C公司',
 					children:[{
-						label:'二级 3-2',
+						label:'地点A',
 						children:[{
-							label:'三级 3-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					}]
+				}
+					]
+				},{
+					label:'贵州省',
+					children:[{
+					label:'A公司',
+					children:[{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
 				},{
-					label:'一级 4-1',
+					label:'B公司',
 					children:[{
-						label:'二级 4-2',
+						label:'地点A',
 						children:[{
-							label:'三级 4-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
 				},{
-					label:'一级 5-1',
+					label:'C公司',
 					children:[{
-						label:'二级 5-2',
+						label:'地点A',
 						children:[{
-							label:'三级 5-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					}]
+				}
+					]
+				},{
+					label:'贵州省',
+					children:[{
+					label:'A公司',
+					children:[{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
 				},{
-					label:'一级 6-1',
+					label:'B公司',
 					children:[{
-						label:'二级 6-2',
+						label:'地点A',
 						children:[{
-							label:'三级 6-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
 				},{
-					label:'一级 7-1',
+					label:'C公司',
 					children:[{
-						label:'二级 7-2',
+						label:'地点A',
 						children:[{
-							label:'三级 7-3'
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						}]
+					},{
+						label:'地点A',
+						children:[{
+							label:'梁场A',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场B',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
+						},{
+							label:'梁场C',
+							children:[{
+								label:'梁场地点A',
+								label:'梁场地点B',
+								label:'梁场地点C',
+							},]
 						}]
 					}]
-				},{
-					label:'一级 8-1',
-					children:[{
-						label:'二级 8-2',
-						children:[{
-							label:'三级 8-3'
-						}]
-					}]
+				}
+					]
 				}],
 				defaultProps:{
-					children:'children',
-					label:'label'
+					label:'label',
+					children:'children'
 				}
 			}
-		}
 	}
+}
 </script>
 
 <style type="text/css">
@@ -93,12 +721,12 @@
 		position: absolute;
 		top: 70px;
 		height: 100%;
-		min-width: 300px;
+		width: 300px;
 		background-color: #324157;
 	}
-	.nav-tree{
+	.vm_tree{
 		background-color: #324157;
 		border: none;
-		color: #fff;
+		color:#fff;
 	}
 </style>
