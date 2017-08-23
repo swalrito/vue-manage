@@ -3,9 +3,9 @@
 		<vm-head></vm-head>
 		<vm-nav></vm-nav>
 		<div class="content">
-			<transition name='leave' mode='out-in'>
-				<router-view></router-view>
-			</transition>
+		<transition name='fade' mode='out-in'>
+			<router-view></router-view>
+		</transition>
 		</div>
 	</div>
 </template>

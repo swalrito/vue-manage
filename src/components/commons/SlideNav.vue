@@ -27,9 +27,8 @@ import axios from 'axios'
 			}
 		},
 		methods:{
-	      handleNodeClick(data,node) {
+	      handleNodeClick(data,node,tree) {
 	      	let level=node.level;
-	      	console.log(level);
 	      	let id=data.$treeNodeId;
 	      	if(level==2){
 	      		this.$router.push('/index/company'+id);
