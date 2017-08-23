@@ -14,7 +14,20 @@ export default new Router({
     	component:resolve => require(['../components/pages/login/login.vue'], resolve)
     },{
     	path:'/index',
-    	component:resolve => require(['../components/pages/index/index.vue'],resolve)
+    	component:resolve => require(['../components/pages/index/index.vue'],resolve),
+        children:[{
+            path:'/index/company:id',
+            component:resolve => require(['../components/pages/company/company.vue'],resolve)
+        },{
+            path:'/index/address:id/',
+            component:resolve=>require(['../components/pages/address/address.vue'],resolve)
+        },{
+            path:'/index/beamField:id/',
+            component:resolve=>require(['../components/pages/BeamField/BeamField.vue'],resolve)
+        },{
+            path:'/index/BFAdress:id',
+            component:resolve=>require(['../components/pages/BFAdress/BFAdress.vue'],resolve)
+        }]
     }
   ]
 })

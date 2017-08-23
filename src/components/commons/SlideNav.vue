@@ -3,13 +3,12 @@
 	<el-menu theme="dark">
 		<el-submenu index='1'>
 			<template slot='title'><i class="el-icon-menu"></i> 公路项目</template>
-			<el-tree :props='defaultProps' :data='data' class='vm_tree'>
+			<el-tree :props='defaultProps' :data='data' @node-click="handleNodeClick" :expand-on-click-node='false' class='vm_tree'>
 			</el-tree>
 		</el-submenu>
 		<el-submenu index='2'>
 			<template slot='title'><i class="el-icon-menu"></i>铁路项目</template>
-			<el-tree :props='defaultProps' :data='data' class='vm_tree'>
-			</el-tree>
+			<el-tree :data="data" :props="defaultProps" @node-click="handleNodeClick" :expand-on-click-node='false' class='vm_tree'></el-tree>
 		</el-submenu>
 	</el-menu>
 	</div>
@@ -27,6 +26,25 @@ import axios from 'axios'
 				}
 			}
 		},
+		methods:{
+	      handleNodeClick(data,node) {
+	      	let level=node.level;
+	      	console.log(level);
+	      	let id=data.$treeNodeId;
+	      	if(level==2){
+	      		this.$router.push('/index/company'+id);
+	      	}
+	      	else if (level==3) {
+	      		this.$router.push('/index/address'+id);
+	      	}
+	      	else if (level==4) {
+	      		this.$router.push('/index/beamField'+id);
+	      	}
+	      	else if(level==5){
+	      		this.$router.push('/index/BFAdress'+id);
+	      	}
+	      }
+	    },
 		beforeMount(){
 			axios.get('../../../static/data/slideNav.json').then(response =>{
 				this.data=response.data.data;
@@ -41,8 +59,7 @@ import axios from 'axios'
 
 <style type="text/css">
 	.slideNav{
-		position: absolute;
-		top: 70px;
+		float: left;
 		height: 100%;
 		width: 300px;
 		background-color: #324157;
