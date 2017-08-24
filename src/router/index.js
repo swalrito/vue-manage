@@ -27,6 +27,15 @@ export default new Router({
         },{
             path:'/index/BFAdress:id',
             component:resolve=>require(['../components/pages/BFAdress/BFAdress.vue'],resolve)
+        },{
+            path:'/index/Schart',
+            component:resolve=>require(['../components/pages/schart/schart.vue'],resolve)
+        },{
+            path:'/index/Report',
+            component:resolve=>require(['../components/pages/report/report.vue'],resolve)
+        },{
+            path:'/index/ReportSchart',
+            component:resolve=>require(['../components/pages/reportSchart/reportSchart.vue'],resolve)
         }]
     }
   ]

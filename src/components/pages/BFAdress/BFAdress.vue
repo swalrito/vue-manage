@@ -36,7 +36,7 @@
 				label='曲线报表'
 				align='center'>
 				<template scope="scope">
-					<a :href="scope.row.report.url">报表</a>
+					<a :href="scope.row.report.url">曲线报表</a>
 				</template>
 			</el-table-column>
 		</el-table>
