@@ -62,6 +62,7 @@ import axios from 'axios'
 		height: 100%;
 		width: 300px;
 		background-color: #324157;
+		overflow-y: scroll;
 	}
 	.vm_tree{
 		background-color: #324157;
