@@ -1,5 +1,12 @@
 <template>
 	<div class="BFAdress">
+		<!--面包屑-->
+		<div class="breadCrumb">
+		<el-breadcrumb>
+			<el-breadcrumb-item :to="{path:path}"><i class="el-icon-menu BR_content"></i><span class="BR_content">主表格</span> </el-breadcrumb-item>
+		</el-breadcrumb>
+		</div>
+		<!--表格-->
 		<el-table 
 				:data='tableData' 
 				border 
@@ -48,15 +55,20 @@
 	export default{
 		data(){
 			return{
-				tableData:[]
+				tableData:[],
+				path:''
 			}
 		},
 		beforeMount(){
 			axios.get('../../../../static/data/table.json').then(
 				response=>{
 					this.tableData=(response.data.tableData);
-				})
-		}
+				});
+			//获取当前路由地址
+			let route=this.$route.matched;
+			let len=route.length;
+			this.path=route[len-2].path;
+					}
 	}
 </script>
 
@@ -64,5 +76,12 @@
 	a{
 		color:#000;
 		text-decoration: underline;
+	}
+	.breadCrumb{
+		margin: 20px;
+	}
+	.breadCrumb .BR_content{
+		font-size: 18px;
+		margin-right: 10px;
 	}
 </style>

@@ -1,5 +1,18 @@
 <template>
 	<div class="reprotSchart">
+	<!--面包屑-->
+		<div class="breadCrumb">
+		<el-breadcrumb>
+			<el-breadcrumb-item :to="{path:path}">
+				<i class="el-icon-menu BR_content"></i>
+				<span class="BR_content">主表格</span> 
+			</el-breadcrumb-item>
+			<el-breadcrumb-item>
+				<span class="BR_content">曲线报表</span> 
+			</el-breadcrumb-item>
+		</el-breadcrumb>
+		</div>
+		<!--曲线报表-->
 		<schart canvasId='RS_bar' 
 				:data='data' 
 				:options='options' 
@@ -63,7 +76,8 @@
 					{Num:'12312313',date:'2017/8/24',name:'小明',age:'24',job:'老师'},
 					{Num:'12312313',date:'2017/8/24',name:'小明',age:'24',job:'老师'},
 					{Num:'12312313',date:'2017/8/24',name:'小明',age:'24',job:'老师'}
-					]
+					],
+				path:''
 			}
 		},
 		beforeMount(){
@@ -72,7 +86,10 @@
 					this.data=response.data.data;
 					this.options=response.data.options;
 				}
-				)
+				);
+			let route=this.$route.matched;
+			let len=route.length;
+			this.path=route[len-2].path;
 		},
 		components:{
 			Schart
@@ -83,5 +100,12 @@
 <style type="text/css">
 	#RS_bar{
 		float:left;
+	}
+	.breadCrumb{
+		margin: 20px;
+	}
+	.breadCrumb .BR_content{
+		font-size: 18px;
+		margin-right: 10px;
 	}
 </style>

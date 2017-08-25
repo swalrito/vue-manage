@@ -1,5 +1,18 @@
 <template>
 	<div class="report">
+	<!--面包屑-->
+		<div class="breadCrumb">
+			<el-breadcrumb>
+				<el-breadcrumb-item :to="{path:path}">
+					<i class="el-icon-menu BR_content"></i>
+					<span class="BR_content">主表格</span>
+				</el-breadcrumb-item>
+				<el-breadcrumb-item>
+					<span class="BR_content">报表</span>
+				</el-breadcrumb-item>
+			</el-breadcrumb>
+		</div>
+		<!--报表-->
 		<el-table 
 			:data='data' 
 			border 
@@ -45,9 +58,15 @@
 					{Num:'12312313',date:'2017/8/24',name:'小明',age:'24',job:'老师'},
 					{Num:'12312313',date:'2017/8/24',name:'小明',age:'24',job:'老师'},
 					{Num:'12312313',date:'2017/8/24',name:'小明',age:'24',job:'老师'},
-					]
+					],
+					path:''
 					}
-			}
+			},
+		beforeMount(){
+			let route=this.$route.matched;
+			let len=route.length;
+			this.path=route[len-2].path;
+		}
 		}
 	
 </script>
