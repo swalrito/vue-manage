@@ -82,6 +82,7 @@
 					this.tableData=this.totalTableData.slice(0,11);
 					this.length=response.data.tableData.length;
 				});
+			this.path=this.$route.fullPath;
 
 					}
 	}
