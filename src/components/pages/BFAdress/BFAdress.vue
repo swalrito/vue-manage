@@ -52,7 +52,8 @@
 			layout="prev, pager, next, jumper" 
 			:total="length" 
 			:page-size='10' 
-			@current-change='changeTable'>
+			@current-change='changeTable' 
+			class='pagination'>
 		</el-pagination>
 	</div>
 </template>
@@ -97,5 +98,10 @@
 	.breadCrumb .BR_content{
 		font-size: 18px;
 		margin-right: 10px;
+	}
+	.pagination{
+		position: absolute;
+		right: 20px;
+		top: 600px;
 	}
 </style>
