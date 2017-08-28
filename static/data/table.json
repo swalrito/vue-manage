@@ -1,14 +1,14 @@
 {
 	"tableData":[
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}},
-		{"Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"http://localhost:8080/#/index/schart","url2":"http://localhost:8080/#/index/report"},"report":{"url":"http://localhost:8080/#/index/reportSchart"}}
+		{"id":"1","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart1","url2":"/Report1"},"report":{"url":"/RSchart1"}},
+		{"id":"2","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart2","url2":"/Report2"},"report":{"url":"/RSchart2"}},
+		{"id":"3","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart3","url2":"/Report3"},"report":{"url":"/RSchart3"}},
+		{"id":"4","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart4","url2":"/Report4"},"report":{"url":"/RSchart4"}},
+		{"id":"5","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart5","url2":"/Report5"},"report":{"url":"/RSchart5"}},
+		{"id":"6","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart6","url2":"/Report6"},"report":{"url":"/RSchart6"}},
+		{"id":"7","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart7","url2":"/Report7"},"report":{"url":"/RSchart7"}},
+		{"id":"8","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart8","url2":"/Report8"},"report":{"url":"/RSchart8"}},
+		{"id":"9","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart9","url2":"/Report9"},"report":{"url":"/RSchart9"}},
+		{"id":"10","Num":"K1+185-YZTL-40-004022YF04","date":"2017/8/24/15:30","tension":"正常","elongation":"正常","data":{"url1":"/Schart10","url2":"/Report10"},"report":{"url":"/RSchart10"}}
 	]
 }

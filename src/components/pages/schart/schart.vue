@@ -41,9 +41,9 @@
 					this.options=response.data.options;
 				}
 				);
-			let route=this.$route.matched;
-			let length=route.length;
-			this.path=route[length-2].path;
+			let route=this.$route.fullPath;
+			let index=route.lastIndexOf('/');
+			this.path='/'+route.slice(1,index);
 		},
 		components:{
 			Schart

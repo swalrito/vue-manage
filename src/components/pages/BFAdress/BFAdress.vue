@@ -3,7 +3,7 @@
 		<!--面包屑-->
 		<div class="breadCrumb">
 		<el-breadcrumb>
-			<el-breadcrumb-item :to="{path:path}"><i class="el-icon-menu BR_content"></i><span class="BR_content">主表格</span> </el-breadcrumb-item>
+			<el-breadcrumb-item><i class="el-icon-menu BR_content"></i><span class="BR_content">主表格</span> </el-breadcrumb-item>
 		</el-breadcrumb>
 		</div>
 		<!--表格-->
@@ -35,15 +35,15 @@
 				label='张拉数据'
 				align='center'>
 				<template scope="scope">
-					<a :href="scope.row.data.url1">曲线</a>
-					<a :href="scope.row.data.url2">报表</a>
+					<router-link :to="path+scope.row.data.url1">曲线</router-link>
+					<router-link :to="path+scope.row.data.url2">报表</router-link>
 				</template>
 			</el-table-column>
 			<el-table-column
 				label='曲线报表'
 				align='center'>
 				<template scope="scope">
-					<a :href="scope.row.report.url">曲线报表</a>
+					<router-link :to="path+scope.row.report.url">曲线报表</router-link>
 				</template>
 			</el-table-column>
 		</el-table>
@@ -64,10 +64,8 @@
 				response=>{
 					this.tableData=(response.data.tableData);
 				});
-			//获取当前路由地址
-			let route=this.$route.matched;
-			let len=route.length;
-			this.path=route[len-2].path;
+			this.path=this.$route.fullPath;
+			console.log(this.path);
 					}
 	}
 </script>

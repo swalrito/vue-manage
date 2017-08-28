@@ -63,9 +63,9 @@
 					}
 			},
 		beforeMount(){
-			let route=this.$route.matched;
-			let len=route.length;
-			this.path=route[len-2].path;
+			let route=this.$route.fullPath;
+			let index=route.lastIndexOf("/");
+			this.path='/'+route.slice(1,index);
 		}
 		}
 	
@@ -74,5 +74,12 @@
 <style type="text/css">
 	.tableHead{
 		font-size: 30px;
+	}
+	.breadCrumb{
+		margin: 20px;
+	}
+	.breadCrumb .BR_content{
+		font-size: 18px;
+		margin-right: 10px;
 	}
 </style>

@@ -3,7 +3,7 @@
 	<el-menu theme="dark">
 		<el-submenu index='1'>
 			<template slot='title'><i class="el-icon-menu"></i> 公路项目</template>
-			<el-tree :props='defaultProps' :data='data' @node-click="handleNodeClick" :expand-on-click-node='false' class='vm_tree'>
+			<el-tree :props='defaultProps' ref='tree' :data='data' @node-click="handleNodeClick" :expand-on-click-node='false' node-key='id' class='vm_tree'>
 			</el-tree>
 		</el-submenu>
 		<el-submenu index='2'>
@@ -29,18 +29,18 @@ import axios from 'axios'
 		methods:{
 	      handleNodeClick(data,node,tree) {
 	      	let level=node.level;
-	      	let id=data.$treeNodeId;
-	      	if(level==2){
-	      		this.$router.push('/index/company'+id);
+	      	let id=data.id;
+	      	if(node.level==2){
+	      		this.$router.push('/index/company_'+id);
 	      	}
-	      	else if (level==3) {
-	      		this.$router.push('/index/address'+id);
+	      	else if(node.level==3){
+	      		this.$router.push('/index/address_'+id);
 	      	}
-	      	else if (level==4) {
-	      		this.$router.push('/index/beamField'+id);
+	      	else if(node.level==4){
+	      		this.$router.push('/index/beamField_'+id);
 	      	}
-	      	else if(level==5){
-	      		this.$router.push('/index/BFAdress'+id);
+	      	else if(node.level==5){
+	      		this.$router.push('/index/BFAdress_'+id);
 	      	}
 	      }
 	    },

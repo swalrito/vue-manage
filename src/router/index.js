@@ -16,25 +16,25 @@ export default new Router({
     	path:'/index',
     	component:resolve => require(['../components/pages/index/index.vue'],resolve),
         children:[{
-            path:'/index/company:id',
+            path:'/index/company_:id',
             component:resolve => require(['../components/pages/company/company.vue'],resolve)
         },{
-            path:'/index/address:id/',
+            path:'/index/address_:id/',
             component:resolve=>require(['../components/pages/address/address.vue'],resolve)
         },{
-            path:'/index/beamField:id/',
+            path:'/index/beamField_:id/',
             component:resolve=>require(['../components/pages/BeamField/BeamField.vue'],resolve)
         },{
-            path:'/index/BFAdress:id',
+            path:'/index/BFAdress_:id',
             component:resolve=>require(['../components/pages/BFAdress/BFAdress.vue'],resolve)
         },{
-            path:'/index/Schart',
+            path:'/index/BFAdress_:id/Schart:id',
             component:resolve=>require(['../components/pages/schart/schart.vue'],resolve)
         },{
-            path:'/index/Report',
+            path:'/index/BFAdress_:id/Report:id',
             component:resolve=>require(['../components/pages/report/report.vue'],resolve)
         },{
-            path:'/index/ReportSchart',
+            path:'/index/BFAdress_:id/RSchart:id',
             component:resolve=>require(['../components/pages/reportSchart/reportSchart.vue'],resolve)
         }]
     }
