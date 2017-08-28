@@ -47,6 +47,13 @@
 				</template>
 			</el-table-column>
 		</el-table>
+		<!--分页-->
+		<el-pagination 
+			layout="prev, pager, next, jumper" 
+			:total="length" 
+			:page-size='10' 
+			@current-change='changeTable'>
+		</el-pagination>
 	</div>
 </template>
 
@@ -55,17 +62,26 @@
 	export default{
 		data(){
 			return{
+				totalTableData:[],
 				tableData:[],
-				path:''
+				path:'',
+				length:0
+			}
+		},
+		methods:{
+			changeTable(page){
+				let prev=11*(page-1);
+				this.tableData=this.totalTableData.slice(prev,prev+11);
 			}
 		},
 		beforeMount(){
 			axios.get('../../../../static/data/table.json').then(
 				response=>{
-					this.tableData=(response.data.tableData);
+					this.totalTableData=response.data.tableData;
+					this.tableData=this.totalTableData.slice(0,11);
+					this.length=response.data.tableData.length;
 				});
-			this.path=this.$route.fullPath;
-			console.log(this.path);
+
 					}
 	}
 </script>
